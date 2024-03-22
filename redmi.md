@@ -1,4 +1,4 @@
-#      TaypScript
+#      TypeScript
 
 ### - **TypeScript - *2012 yilda Microsoft tomonidan taqdim etilgan dasturlash tili va JavaScript imkoniyatlarini kengaytiruvchi veb-ilovalarni ishlab chiqish vositasi sifatida joylashtirilgan. TypeScript tilini ishlab chiqaruvchisi Anders Xeylsberg bo'lib, u ilgari Turbo Pascal, Delphi va C# tillarini yaratgan.***
 
@@ -54,3 +54,31 @@ let binary: number = 0b1010;
 let octal: number = 0o744;
 console.log(decimal, hex, binary, octal); // 6 61453 10 484
 ```
+
+3. **String:** *Matnlar, qo'shimcha belgilar yoki satrlar. Misol uchun: "Salom", "TypScript", "123".*
+
+```
+let color: string = "blue";
+color = 'red'; // Double quotes va single quotes ishlatish mumkin
+console.log(color); // red
+```
+4. **Array:** *Massivlar, biror turdagi elementlarni o'z ichiga oladi. [1, 2, 3] yoki ['salom', 'dunyo'] kabi.*
+
+```
+let list: number[] = [1, 2, 3];
+console.log(list); // [1, 2, 3]
+
+let names: Array<string> = ['John', 'Doe'];
+console.log(names); // ['John', 'Doe']
+```
+
+5. **Tuple:**  *Tartiblangan elementlarga ega massivlar. Misol uchun, [string, number] turidagi tartiblangan massivda birinchi element matn va ikkinchi element son bo'ladi.*
+
+```
+let x: [string, number];
+x = ['hello', 10]; // To'g'ri
+x = [10, 'hello']; // Xato
+console.log(x[0].substring(1)); // ello
+```
+
+
