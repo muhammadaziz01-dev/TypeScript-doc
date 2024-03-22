@@ -80,5 +80,67 @@ x = ['hello', 10]; // To'g'ri
 x = [10, 'hello']; // Xato
 console.log(x[0].substring(1)); // ello
 ```
+6. **Enum:** *O'zgaruvchilarni belgilash uchun ishlatiladi. Masalan, enum Color {Red, Green, Blue}. Bu, Color.Red, Color.Green, Color.Blue qiymatlariga ega bo'ladi.*
 
+```
+enum Color {Red, Green, Blue}
+let c: Color = Color.Green;
+console.log(c); // 1
+```
+7. **Any:** *Har qanday turdagi qiymatni qabul qiladi. Ammo, bu turdan foydalanish tilning dinamik xususiyatlariga qo'shimcha yuklanishga olib kelishi mumkin.*
+
+```
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false; // Hech qanday tur qiymat qabul qiladi
+console.log(notSure); // false
+```
+
+8. **Void:** *Agar funksiya hech qanday qiymat qaytarmasa, unda void turi ishlatiladi.*
+
+```
+function warnUser(): void {
+    console.log("This is a warning message");
+}
+warnUser();
+```
+
+9. **Null va Undefined:** *Misol uchun, biror o'zgaruvchiga bosh qiymat berish uchun ishlatiladi.*
+
+```
+let u: undefined = undefined;
+let n: null = null;
+console.log(u, n); // undefined null
+```
+
+10. **Never:** *Ushbu turi asosan funksiyalarda ishlatiladi va u faqatgi funksiya yoki xatolikni aniqlash uchun ishlatiladi.*
+
+```
+function error(message: string): never {
+    throw new Error(message);
+}
+error("Something went wrong");
+```
+
+11.  **Object:** *JS obyektlari uchun umumiy turi.*
+
+```
+let obj: object = {};
+console.log(obj); // {}
+```
+
+12. **Symbol:** *Unikal belgilar yaratish uchun ishlatiladi.*
+
+```
+let sym1 = Symbol();
+let sym2 = Symbol("key");
+console.log(sym1, sym2); // Symbol() Symbol(key)
+```
+
+13. **BigInt:** *Katta butun sonlarni ifodalaydi.*
+
+```
+const bigNumber: bigint = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1);
+console.log(bigNumber); // 9007199254740992n
+```
 
